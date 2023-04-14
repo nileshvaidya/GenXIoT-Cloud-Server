@@ -1,0 +1,24 @@
+FROM node:18
+
+LABEL version="1.0"
+LABEL description="Development image for the Server"
+
+WORKDIR /app
+
+COPY ["package*.json","nodemon.json*", "./"]
+
+RUN npm install && npm cache clean --force
+
+RUN npm install express
+
+RUN npm install socket.io
+
+RUN npm install nodemon --save-dev
+
+COPY . .
+
+EXPOSE 5000
+
+CMD npm run dev 
+
+# --inspect-0.0.0.0:9229 --signal SIGINT --nolazy 

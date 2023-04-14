@@ -1,0 +1,60 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/server.ts",
+    "scripts": {
+        "start": "node build/server.js",
+        "dev": "nodemon src/server.ts",
+        "prod": "cross-env NODE_ENV=production node build/server.js",
+        "build": "tsc -b"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/body-parser": "^1.19.2",
+        "@types/config": "^0.0.41",
+        "@types/dotenv": "^8.2.0",
+        "@types/express": "^4.17.13",
+        "@types/morgan": "^1.9.3",
+        "@types/node": "^18.0.6",
+        "@types/pino": "^7.0.5",
+        "ts-node": "^10.9.1",
+        "nodemon": "^2.0.7",
+        "typescript": "^4.7.4",
+        "@types/uuid": "^8.3.4",
+        "pino": "^8.2.0",
+        "pino-pretty": "^8.1.0",
+        "prettier": "^2.7.1"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "body-parser": "^1.20.0",
+        "chalk": "^4.1.2",
+        "config": "^3.3.7",
+        "date-fns": "^2.29.3",
+        "dayjs": "^1.11.3",
+        "dotenv": "^16.0.1",
+        "ejs": "^2.6.2",
+        "express": "^4.18.1",
+        "fs": "0.0.1-security",
+        "http-errors": "^2.0.0",
+        "joi": "^17.6.0",
+        "moment": "^2.29.4",
+        "mongoose": "^6.5.2",
+        "morgan": "^1.10.0",
+        "mqtt": "^4.3.7",
+        "nanoid": "^4.0.0",
+        "path": "^0.12.7",
+        "socket.io": "^4.5.1",
+        "text-encoding": "^0.7.0",
+        "util": "^0.12.5",
+        "uuid": "^8.3.2"
+    },
+    "prittier": {
+        "tabwidth": 4
+    },
+    "engines": {
+        "node": ">= 14.13.0"
+    }
+}
